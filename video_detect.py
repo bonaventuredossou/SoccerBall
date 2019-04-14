@@ -4,6 +4,12 @@ import numpy as np
 from darkflow.net.build import TFNet
 import cv2
 
+
+options = {"model": "cfg/yolo_custom.cfg",
+           "gpu": 0}
+
+tfnet2 = TFNet(options)
+
 tfnet2.load_from_ckpt()
 
 cap = cv2.VideoCapture('./sample_video/test_video.avi')
